@@ -48,9 +48,10 @@
 			<h3> - Get 100 credits for free</h3>
 
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button type="button" class="btn btn-success m-3 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
 				Register now
 			</button>
+			<p class="p-3">Do you allready have an account? <a href="login/index.html"> Sign in</a></p>
 		</div>
 
 		<!-- Modal -->
@@ -83,10 +84,11 @@
 								</div>
 							</div>
 							<div class="mb-3">
-								<label for="avatar" class="form-label"></label>
-								<input type="image" class="form-control shadow rounded" id="avatar" placeholder="Avatar"
+								<label for="image" class="avater-label">Upload Image</label>
+								<input class="form-control" type="file" id="avatar" name="avatar" accept="image/*"
 									required>
 							</div>
+
 							<div class="text-center">
 								<button id="register-btn" class="btn bg-success shadow rounded my-5"
 									type="submit">Register</button>

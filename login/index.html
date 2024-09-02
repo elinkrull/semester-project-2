@@ -15,7 +15,7 @@
 
 <body class="min-vh-100 d-flex flex-column flex-body">
 	<header class="bg-primary">
-		<a class="nav-link my-5" href="../index.html">Welcome to Greenbid</a>
+		<a class="nav-link my-5 text-center logo" href="../index.html">Welcome to Greenbid</a>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
 			<div class="container-fluid">
 				<a class="navbar-brand"></a>
@@ -55,7 +55,71 @@
 					<div class="text-center">
 						<button id="login-btn" class="btn bg-primary shadow rounded my-5" type="submit">Login</button>
 					</div>
+					<p>Forgot your password?
+						<a href="">Click here</a>
+					</p>
+					<p class="p-2">Don´t have an account? <a href="register/index.html" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">SIGN UP</a></p>
 				</form>
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<form id="registration-form" name="auth">
+									<div class="mb-3">
+										<label for="name" class="form-label"></label>
+										<input type="text" class="form-control shadow rounded" id="name"
+											placeholder="Name" required>
+									</div>
+									<div class="mb-3">
+										<label for="email" class="form-label"></label>
+										<input type="email" class="form-control shadow rounded" id="email"
+											placeholder="Email" required>
+									</div>
+									<div class="mb-3">
+										<label for="password" class="form-label"></label>
+										<input type="password" class="form-control shadow rounded" id="password"
+											placeholder="Password" minlength="8" required>
+										<div class="invalid-feedback">
+											Password must have a minimum length of 8 characters
+										</div>
+									</div>
+									<div class="mb-3">
+										<label for="avatar" class="form-label"></label>
+										<input type="image" class="form-control shadow rounded" id="avatar"
+											placeholder="Avatar" required>
+									</div>
+									<div class="text-center">
+										<button id="register-btn" class="btn bg-success shadow rounded my-5"
+											type="submit">Register</button>
+									</div>
+									<p class="text-center">By registering you agree to our terms and conditions. Find
+										out how we
+										collect,
+										use and share your
+										data in our
+										Privacy Policy and how we use cookies and similar technologies in our Cookie
+										Policy.</p>
+								</form>
+							</div>
+
+							<div class="modal-footer">
+
+								<p>Do you allready have an account? <a href="index.html">Sign in</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 
 			</div>
 		</div>
