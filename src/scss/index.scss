@@ -1,0 +1,23 @@
+$primary: rgb(197, 223, 198);
+
+// //bootstrap main file
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// //configuration
+// @import "../../node_modules/bootstrap/scss/functions";
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/variables-dark";
+// @import "../../node_modules/bootstrap/scss/maps";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/utilities";
+
+
+//ID´s og class names and then the styling
+.custom-nav-link {
+	font-size: 24px;
+  }
+
+.logo {
+	font-size: 45px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
