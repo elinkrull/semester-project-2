@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Greenbid | Home </title>
+	<meta name="description" content="This is the homepage for Greenbid where you buy or and sell green plants">
+	<link rel="stylesheet" href="dist/css/index.css">
+	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-vh-100 d-flex flex-column flex-body">
+	<header class="bg-primary">
+		<a class="nav-link my-5 text-center logo" href="../index.html">Welcome to Greenbid</a>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse">
+					<div class="navbar-nav">
+						<a class="nav-link custom-nav-link active" aria-current="page">Home</a>
+						<a class="nav-link custom-nav-link" href="auctions/index.html">Auctions</a>
+						<a class="nav-link custom-nav-link" href="profile/index.html">Profile</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="container flex-grow-1 mt-5 text-center">
+		<h1>Welcome to GreenPlant Auction!</h1>
+		<p class="">Discover the perfect green companions for your indoor space! At GreenPlant Auction, we bring
+			together plant
+			enthusiasts and collectors to bid on a vibrant selection of indoor plants. Whether you're looking for a rare
+			succulent, a lush fern, or a statement monstera, you'll find it here.
+
+			Join our community of plant lovers, place your bids, and watch as your home transforms into a green oasis.
+			Start exploring now and bring a little more nature into your life!</p>
+		<div class="pt-5">
+			<h2>Join us today!</h2>
+			<h3> - Get 100 credits for free</h3>
+
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				Register now
+			</button>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form id="registration-form" name="auth">
+							<div class="mb-3">
+								<label for="name" class="form-label"></label>
+								<input type="text" class="form-control shadow rounded" id="name" placeholder="Name"
+									required>
+							</div>
+							<div class="mb-3">
+								<label for="email" class="form-label"></label>
+								<input type="email" class="form-control shadow rounded" id="email" placeholder="Email"
+									required>
+							</div>
+							<div class="mb-3">
+								<label for="password" class="form-label"></label>
+								<input type="password" class="form-control shadow rounded" id="password"
+									placeholder="Password" minlength="8" required>
+								<div class="invalid-feedback">
+									Password must have a minimum length of 8 characters
+								</div>
+							</div>
+							<div class="mb-3">
+								<label for="avatar" class="form-label"></label>
+								<input type="image" class="form-control shadow rounded" id="avatar" placeholder="Avatar"
+									required>
+							</div>
+							<div class="text-center">
+								<button id="register-btn" class="btn bg-success shadow rounded my-5"
+									type="submit">Register</button>
+							</div>
+							<p class="text-center">By registering you agree to our terms and conditions. Find out how we
+								collect,
+								use and share your
+								data in our
+								Privacy Policy and how we use cookies and similar technologies in our Cookie Policy.</p>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<p>Do you allready have an account? <a href="login/index.html">Sign in</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<footer class="p-3 text-center bg-primary">
+		<div class="container">
+			<div class="row">
+				<p>About us</p>
+				<p>Contact</p>
+				<p>Terms of use</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

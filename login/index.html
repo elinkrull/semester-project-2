@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Greenbid | Login</title>
+	<meta name="description" content="This is the page where you can register and sign up for an account">
+	<link rel="stylesheet" href="../dist/css/index.css">
+	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
+
+
+
+
+<body class="min-vh-100 d-flex flex-column flex-body">
+	<header class="bg-primary">
+		<a class="nav-link my-5" href="../index.html">Welcome to Greenbid</a>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+						<a class="nav-link" href="../auctions/index.html">Auctions</a>
+						<a class="nav-link" href="../profile/index.html">Profile</a>
+						<!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="container flex-grow-1">
+		<div class="container borders rounded shadow bg-white col-9 col-sm-6 col-md-5 col-xl-4">
+			<div class="row mt-5">
+				<h2 class="fw-bol mt-5 text-center">Login</h2>
+				<form id="login-from" name="auth">
+					<div class="mb-3">
+						<label for="email" class="form-label"></label>
+						<input type="email" class="form-control shadow rounded" id="email" placeholder="Email" required>
+					</div>
+					<div class="mb-3">
+						<label for="password" class="form-label"></label>
+						<input type="password" class="form-control shadow rounded" id="password" placeholder="Password"
+							minlength="8" required>
+						<div class="invalid-feedback">
+							Password must have a minimum length of 8 characters
+						</div>
+					</div>
+					<div class="text-center">
+						<button id="login-btn" class="btn bg-primary shadow rounded my-5" type="submit">Login</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</main>
+	<footer class="p-3 text-center bg-primary">
+		<div class="container">
+			<div class="row">
+				<p>About us</p>
+				<p>Contact</p>
+				<p>Terms of use</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
