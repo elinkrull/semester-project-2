@@ -3,7 +3,8 @@
   "description": "An auction application",
   "scripts": {
     "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css  & live-server"
+    "watch": "sass --watch src/scss:dist/css  & live-server",
+	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
