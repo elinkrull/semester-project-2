@@ -34,11 +34,51 @@
 						<a class="nav-link active" aria-current="page">Home</a>
 						<a class="nav-link" href="auctions/index.html">Auctions</a>
 						<a class="nav-link" href="profile/index.html">Profile</a>
+						<!-- Button trigger login modal -->
+						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+					</div>
+
+					<!-- Login modal -->
+					<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form id="login-form" name="auth">
+
+										<div class="mb-3">
+											<label for="email" class="form-label"></label>
+											<input type="email" class="form-control shadow rounded" id="login-email"
+												placeholder="Email" required>
+										</div>
+										<div class="mb-3">
+											<label for="password" class="form-label"></label>
+											<input type="login-password" class="form-control shadow rounded"
+												id="login-password" placeholder="Password" minlength="8" required>
+											<div class="invalid-feedback">
+												Password must have a minimum length of 8 characters
+											</div>
+										</div>
+										<div class="text-center">
+											<button id="login-btn" class="btn btn-success shadow rounded my-5"
+												type="submit">Login</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</header>
+
 	<main class="container flex-grow-1 mt-5 text-center">
 		<h1 class="mb-5">Welcome to GreenPlant Auction!</h1>
 		<p class="">Discover the perfect green companions for your indoor space! At GreenPlant Auction, we bring
@@ -52,19 +92,20 @@
 			<h2>Join us today!</h2>
 			<h3> - Get 100 credits for free</h3>
 
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success m-3 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<!-- Button trigger register modal -->
+			<button type="button" class="btn btn-success m-3 p-2" data-bs-toggle="modal"
+				data-bs-target="#registerModal">
 				Register now
 			</button>
-			<p class="p-3">Do you allready have an account? <a href="login/index.html"> Sign in</a></p>
 		</div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<!-- Register Modal -->
+		<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+						<h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
 
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
@@ -89,13 +130,13 @@
 								</div>
 							</div>
 							<div class="mb-3">
-								<label for="image" class="avater-label">Upload Image</label>
+								<label for="image" class="avater-label"></label>
 								<input class="form-control" type="file" id="avatar" name="avatar" accept="image/*"
 									required>
 							</div>
 
 							<div class="text-center">
-								<button id="register-btn" class="btn bg-success shadow rounded my-5"
+								<button id="register-btn" class="btn btn-success shadow rounded my-5"
 									type="submit">Register</button>
 							</div>
 							<p class="text-center">By registering you agree to our terms and conditions. Find out how we
@@ -106,10 +147,6 @@
 						</form>
 					</div>
 
-					<div class="modal-footer">
-						<p>Do you allready have an account? <a href="login/index.html">Sign in</a>
-						</p>
-					</div>
 				</div>
 			</div>
 		</div>
