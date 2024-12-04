@@ -4,7 +4,7 @@
   "scripts": {
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css  & live-server",
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
-    "sass": "^1.77.8"
+    "sass": "^1.82.0"
   },
   "version": "0.0.1",
   "license": "ISC"
