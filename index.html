@@ -6,7 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Greenbid | Home </title>
-	<meta name="description" content="This is the homepage for Greenbid where you buy or and sell green plants">
+	<meta name="description"
+		content="This is the homepage for Greenbid where you buy or and sell green plants. You can register and login on this homepage">
 	<link rel="stylesheet" href="dist/css/index.css">
 	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,7 +16,12 @@
 
 <body class="min-vh-100 d-flex flex-column flex-body">
 	<header class="bg-primary">
-		<a class="nav-link my-5 text-center logo" href="../index.html">Welcome to Greenbid</a>
+		<div class="row">
+			<div class="col-12 d-flex align-items-center">
+				<a class="nav-link text-center mx-auto logo p-5" href="/index.html">Welcome to Greenbid</a>
+				<i class="fa-solid fa-coins custom-coins"></i>
+			</div>
+		</div>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
 			<div class="container-fluid">
 				<a class="navbar-brand"></a>
@@ -29,68 +35,114 @@
 						<a class="nav-link active" aria-current="page">Home</a>
 						<a class="nav-link" href="auctions/index.html">Auctions</a>
 						<a class="nav-link" href="profile/index.html">Profile</a>
+						<!-- Button trigger login modal -->
+						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+					</div>
+
+					<!-- Login modal -->
+					<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content mt-5">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form id="login-form" name="auth">
+
+										<div class="mb-3">
+											<label for="email" class="form-label">Email address</label>
+											<input type="email" class="form-control shadow rounded" id="login-email"
+												placeholder="name@stud.noroff.no" required>
+										</div>
+										<div class="mb-3">
+											<label for="password" class="form-label">Password</label>
+											<input type="login-password" class="form-control shadow rounded"
+												id="login-password" placeholder="Enter your password" minlength="8"
+												required>
+											<div class="invalid-feedback">
+												Password must have a minimum length of 8 characters
+											</div>
+										</div>
+										<div class="text-center">
+											<button id="login-btn" class="btn btn-success shadow rounded my-5 p-3"
+												type="submit">Login</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<main class="container flex-grow-1 mt-5 text-center">
-		<h1 class="mb-5">Welcome to GreenPlant Auction!</h1>
-		<p class="">Discover the perfect green companions for your indoor space! At GreenPlant Auction, we bring
-			together plant
-			enthusiasts and collectors to bid on a vibrant selection of indoor plants. Whether you're looking for a rare
-			succulent, a lush fern, or a statement monstera, you'll find it here.
 
-			Join our community of plant lovers, place your bids, and watch as your home transforms into a green oasis.
-			Start exploring now and bring a little more nature into your life!</p>
-		<div class="pt-5">
-			<h2>Join us today!</h2>
-			<h3> - Get 100 credits for free</h3>
+	<main class="container flex-grow-1 mt-5">
+		<div class="text-center">
+			<h1 class="mb-5">Welcome to GreenPlant Auction!</h1>
+			<p class="">Discover the perfect green companions for your indoor space! At GreenPlant Auction, we bring
+				together plant
+				enthusiasts and collectors to bid on a vibrant selection of indoor plants. Whether you're looking for a
+				rare
+				succulent, a lush fern, or a statement monstera, you'll find it here.
 
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success m-3 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-				Register now
-			</button>
-			<p class="p-3">Do you allready have an account? <a href="login/index.html"> Sign in</a></p>
+				Join our community of plant lovers, place your bids, and watch as your home transforms into a green
+				oasis.
+				Start exploring now and bring a little more nature into your life!</p>
+			<div class="pt-5">
+				<h2>Join us today!</h2>
+				<h3> - Get 100 credits for free</h3>
+
+				<!-- Button trigger register modal -->
+				<button type="button" class="btn btn-success m-3 p-2" data-bs-toggle="modal"
+					data-bs-target="#registerModal">
+					Register now
+				</button>
+			</div>
 		</div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<!-- Register Modal -->
+		<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog">
-				<div class="modal-content">
+				<div class="modal-content mt-5">
 					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+						<h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
 
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<form id="registration-form" name="auth">
 							<div class="mb-3">
-								<label for="name" class="form-label"></label>
-								<input type="text" class="form-control shadow rounded" id="name" placeholder="Name"
-									required>
+								<label for="name" class="form-label">Name</label>
+								<input type="text" class="form-control shadow rounded" id="name"
+									placeholder="Enter your name" required>
 							</div>
 							<div class="mb-3">
-								<label for="email" class="form-label"></label>
-								<input type="email" class="form-control shadow rounded" id="email" placeholder="Email"
-									required>
+								<label for="email" class="form-label">Email address</label>
+								<input type="email" class="form-control shadow rounded" id="email"
+									placeholder="name@stud.noroff.no" required>
 							</div>
 							<div class="mb-3">
-								<label for="password" class="form-label"></label>
+								<label for="password" class="form-label">Password</label>
 								<input type="password" class="form-control shadow rounded" id="password"
-									placeholder="Password" minlength="8" required>
+									placeholder="Enter your password" minlength="8" required>
 								<div class="invalid-feedback">
 									Password must have a minimum length of 8 characters
 								</div>
 							</div>
 							<div class="mb-3">
-								<label for="image" class="avater-label">Upload Image</label>
+								<label for="image" class="form-label">Avatar url</label>
 								<input class="form-control" type="file" id="avatar" name="avatar" accept="image/*"
 									required>
 							</div>
 
 							<div class="text-center">
-								<button id="register-btn" class="btn bg-success shadow rounded my-5"
+								<button id="register-btn" class="btn btn-success shadow rounded my-5 p-3"
 									type="submit">Register</button>
 							</div>
 							<p class="text-center">By registering you agree to our terms and conditions. Find out how we
@@ -101,10 +153,6 @@
 						</form>
 					</div>
 
-					<div class="modal-footer">
-						<p>Do you allready have an account? <a href="login/index.html">Sign in</a>
-						</p>
-					</div>
 				</div>
 			</div>
 		</div>
