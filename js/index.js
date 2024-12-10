@@ -38,11 +38,13 @@ getListings();
 	 const endsAt = el.endsAt;
 
 
-	 return `<div class="card shadow col-md-6 col-lg-4 col-xl-3 col-xxl-3 mb-4">
-	 <div class="card-body row">
+	 return `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+		<div class="card-body shadow">
 		 <h1>${title}</h1>
 			 <p>${description}</p>
-			 <img src=${imageURL} />
+			 <img class="img-fluid" src=${imageURL} />
 			 <p>Posted: ${created}</p>
 			 <p>Auction ends: ${endsAt}</p>
 			 <p>Bids: ${countBids}</p>
@@ -50,10 +52,9 @@ getListings();
 				   data-bs-target="#staticBackdrop">
 				   View item
 			   </button>
+		</div> 
 	 </div> 	
    </div> `
-
- 
    ;
 	});
 
@@ -66,3 +67,4 @@ getListings();
 
   //Search function
 
+const search = document.getElementById("search-input")
