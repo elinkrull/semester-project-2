@@ -15,16 +15,16 @@ const API_LISTINGS = "/listings";
 }
 getListings();
 
+
 //display listings on the page - no auth required
  async function displayListings() {
 	const listings = await getListings();
 	const data = listings.data;
 
 
-	 // Sort the data by created date (if not already sorted) and display only the 20 latest
+	//  Sort the data by created date (if not already sorted) and display only the 20 latest
 	 const latestListings = data
 	 .sort((a, b) => new Date(b.created) - new Date(a.created)) 
-	 .slice(0, 20);
    
 	const feedContainer = document.getElementById("display-listings-container");
    
@@ -38,11 +38,13 @@ getListings();
 	 const endsAt = el.endsAt;
 
 
-	 return `<div class="card shadow col-md-6 col-lg-4 col-xl-3 col-xxl-3 mb-4">
-	 <div class="card-body row">
+	 return `
+      <div class="col-md-4 mb-4">
+        <div class="card">
+		<div class="card-body shadow">
 		 <h1>${title}</h1>
 			 <p>${description}</p>
-			 <img src=${imageURL} />
+			 <img class="img-fluid" src=${imageURL} />
 			 <p>Posted: ${created}</p>
 			 <p>Auction ends: ${endsAt}</p>
 			 <p>Bids: ${countBids}</p>
@@ -50,10 +52,9 @@ getListings();
 				   data-bs-target="#staticBackdrop">
 				   View item
 			   </button>
+		</div> 
 	 </div> 	
    </div> `
-
- 
    ;
 	});
 
@@ -63,6 +64,4 @@ getListings();
   };
 
   displayListings();
-
-  //Search function
 

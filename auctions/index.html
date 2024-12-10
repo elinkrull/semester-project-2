@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Greenbid | Auctions </title>
+	<title>MarketMingle | Auctions </title>
 	<meta name="description" content="Here you can see and search through all the listings">
 	<link rel="stylesheet" href="../dist/css/index.css">
 	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
@@ -13,11 +13,11 @@
 	<script defer src="../js/index.js"></script>
 </head>
 
-<body class="min-vh-100 d-flex flex-column flex-body">
-	<header class="header">
+<body class="min-vh-100">
+	<header class="header d-flex flex-column flex-body">
 		<div class="row">
 			<div class="col-12 d-flex align-items-center">
-				<a class="nav-link text-center mx-auto logo p-5" href="/index.html">Greenbid</a>
+				<a class="nav-link text-center mx-auto logo p-5" href="/index.html">MarketMingle</a>
 			</div>
 		</div>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,22 +38,20 @@
 			</div>
 		</nav>
 	</header>
-	<main class="flex">
-		<h1 class="text-center"> All plants on auction</h1>
-		<form class="d-flex m-3" role="search">
-			<input id="search-input" class="form-control me-2 color-light-grey" type="search"
-				placeholder="Search for title or description" aria-label="Search">
-			<button id="search-btn" class="btn btn-outline-success" type="submit">Search</button>
-		</form>
-
-		<!-- feed with all listings starts -->
-		<div id="display-listings-container" class="container">
-			<div class="row">
-
+	<main>
+		<div>
+			<div class="d-flex justify-content-center align-items-center m-3">
+				<input id=" search-input" class="color-light-grey p-2 col-4" type="search"
+					placeholder="Search for title or description" aria-label="Search">
 			</div>
-		</div>
-		<!-- feed with all listings end -->
+			<!-- feed with all listings starts -->
+			<div class="container">
+				<div id="display-listings-container" class="row">
 
+				</div>
+			</div>
+			<!-- feed with all listings end -->
+		</div>
 	</main>
 	<footer class="p-3 text-center footer">
 		<div class="container">
