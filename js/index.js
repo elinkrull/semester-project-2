@@ -15,16 +15,16 @@ const API_LISTINGS = "/listings";
 }
 getListings();
 
+
 //display listings on the page - no auth required
  async function displayListings() {
 	const listings = await getListings();
 	const data = listings.data;
 
 
-	 // Sort the data by created date (if not already sorted) and display only the 20 latest
+	//  Sort the data by created date (if not already sorted) and display only the 20 latest
 	 const latestListings = data
 	 .sort((a, b) => new Date(b.created) - new Date(a.created)) 
-	 .slice(0, 20);
    
 	const feedContainer = document.getElementById("display-listings-container");
    
@@ -65,6 +65,3 @@ getListings();
 
   displayListings();
 
-  //Search function
-
-const search = document.getElementById("search-input")
