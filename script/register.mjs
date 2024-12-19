@@ -1,10 +1,10 @@
 import { REGISTRATION_URL } from "./constants.mjs";
 
-//get the form element
-//stop the form to submit by default
-//make an click-event listener to get data from the form
-//get the user input
-//submit user input to the right endpoint
+// get the form element
+// stop the form to submit by default
+// make an click-event listener to get data from the form
+// get the user input
+// submit user input to the right endpoint
 
 
 let registrationFrom = document.getElementById("registration-form");
@@ -17,7 +17,7 @@ async function registerUser(userData) {
 		},
 		body: JSON.stringify(userData),
 	};
-	const response = await fetch("REGISTRATION_URL", options);
+	const response = await fetch(REGISTRATION_URL, options);
 	console.log(response);
 }
 
