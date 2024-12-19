@@ -1,3 +1,4 @@
+import { REGISTRATION_URL } from "./constants.mjs";
 
 //get the form element
 //stop the form to submit by default
@@ -5,7 +6,20 @@
 //get the user input
 //submit user input to the right endpoint
 
+
 let registrationFrom = document.getElementById("registration-form");
+
+async function registerUser(userData) {
+	const options = {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/JSON"
+		},
+		body: JSON.stringify(userData),
+	};
+	const response = await fetch("REGISTRATION_URL", options);
+	console.log(response);
+}
 
 function formSubmit(event) {
 	event.preventDefault();
@@ -19,7 +33,7 @@ function formSubmit(event) {
 		email: emailElement.value,
 		password: passwordElement.value
 	};
-	console.log(userData);
+	registerUser(userData);
 }
 
 registrationFrom.addEventListener("submit", formSubmit);
