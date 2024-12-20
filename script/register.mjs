@@ -7,7 +7,7 @@ import { REGISTRATION_URL } from "./constants.mjs";
 // submit user input to the right endpoint
 
 
-let registrationFrom = document.getElementById("registration-form");
+let registrationForm = document.getElementById("registration-form");
 
 async function registerUser(userData) {
 	const options = {
@@ -21,7 +21,7 @@ async function registerUser(userData) {
 	console.log(response);
 }
 
-function formSubmit(event) {
+function handleFormSubmit(event) {
 	event.preventDefault();
 
 	let nameElement = document.getElementById("reg-name");
@@ -34,6 +34,7 @@ function formSubmit(event) {
 		password: passwordElement.value
 	};
 	registerUser(userData);
+	console.log(userData);
 }
 
-registrationFrom.addEventListener("submit", formSubmit);
+registrationForm.addEventListener("submit", handleFormSubmit);
