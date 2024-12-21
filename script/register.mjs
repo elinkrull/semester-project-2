@@ -1,4 +1,5 @@
 import { REGISTRATION_URL } from "./constants.mjs";
+import { doFetch } from "./doFetch.mjs";
 
 // get the form element
 // stop the form to submit by default
@@ -7,21 +8,17 @@ import { REGISTRATION_URL } from "./constants.mjs";
 // submit user input to the right endpoint
 
 
-let registrationFrom = document.getElementById("registration-form");
+let registrationForm = document.getElementById("registration-form");
 
 async function registerUser(userData) {
 	const options = {
 		method: "POST",
-		headers: {
-			"Content-Type": "application/JSON"
-		},
 		body: JSON.stringify(userData),
-	};
-	const response = await fetch(REGISTRATION_URL, options);
-	console.log(response);
-}
+		};
+		await doFetch(REGISTRATION_URL, options);
+	}
 
-function formSubmit(event) {
+function handleFormSubmit(event) {
 	event.preventDefault();
 
 	let nameElement = document.getElementById("reg-name");
@@ -34,6 +31,7 @@ function formSubmit(event) {
 		password: passwordElement.value
 	};
 	registerUser(userData);
+	console.log(userData);
 }
 
-registrationFrom.addEventListener("submit", formSubmit);
+registrationForm.addEventListener("submit", handleFormSubmit);
