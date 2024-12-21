@@ -14,11 +14,10 @@ const loginForm = document.getElementById("login-form");
 loginForm.addEventListener("submit", handleLoginFormSubmit);
 
 async function handleLoginUser(userData) {
-	console.log(userData);
 	const options = {
 		method: "POST",
 		headers: {
-			"Content-Type": "application/JSON"
+			"Content-Type": "application/JSON",
 		},
 		body: JSON.stringify(userData),
 	};
@@ -33,8 +32,6 @@ async function handleLoginUser(userData) {
 	// Store the accesstoken in localStorage
 	localStorage.setItem("accessToken", accessToken );
 }
-
-handleLoginUser();
 
 function handleLoginFormSubmit(event) {
 	event.preventDefault();
