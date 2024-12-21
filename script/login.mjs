@@ -48,7 +48,7 @@ function handleLoginFormSubmit(event) {
 	// Passing the object with the input values into the handleLoginUser function
 	handleLoginUser(loginUserData);
 	
-	// Redirect to profile page if login is okey
-	setTimeout(() => (location.href = "./profile/"), 2000);
+	// Redirect to listings page if login is okey
+	setTimeout(() => (location.href = "./listings/"), 2000);
 }
 

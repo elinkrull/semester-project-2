@@ -33,7 +33,7 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav custom-nav-link">
 						<a class="nav-link" aria-current="page" href="../index.html">Home</a>
-						<a class="nav-link" href="../auctions/index.html">Listings</a>
+						<a class="nav-link" href="../listings/index.html">Listings</a>
 						<a class="nav-link active">Profile</a>
 					</div>
 				</div>
@@ -42,18 +42,17 @@
 	</header>
 	<main class="container flex-grow-1">
 
+		<div class="justify-content-center col-11 col-lg-9 my-5">
+			<h2 class="mb-3">#name</h2>
+		</div>
 		<!-- profile image -->
 		<div class="justify-content-evenly">
 			<div class="col-6 col-md-4 col-xl-3 rounded">
 				<img class="img-thumbnail" src="#" alt="Profile picture of a woman">
 			</div>
 		</div>
-
-		<div class="justify-content-center col-11 col-lg-9 my-5">
-			<h2 class="mb-3">Plantvibes</h2>
-		</div>
 		<p>a button to change avatar</p>
-		(open in a modal)
+
 
 		<!-- Button trigger modal -->
 		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -80,41 +79,6 @@
 			</div>
 		</div>
 
-		<!-- post form -->
-		<div class="container mt-5">
-			<h2 class="mb-4">Add Object to Auction</h2>
-			<form action="/submit-auction" method="POST" enctype="multipart/form-data">
-				<!-- Title Field -->
-				<div class="mb-3">
-					<label for="title" class="form-label">Title</label>
-					<input type="text" class="form-control" id="title" name="title" required
-						placeholder="Enter the name of the plant">
-				</div>
-
-				<!-- Description Field -->
-				<div class="mb-3">
-					<label for="description" class="form-label">Description</label>
-					<textarea class="form-control" id="description" name="description" rows="4" required
-						placeholder="Enter a description of the plant"></textarea>
-				</div>
-
-				<!-- Price Field -->
-				<div class="mb-3">
-					<label for="price" class="form-label">Starting Price</label>
-					<input type="number" class="form-control" id="price" name="price" required
-						placeholder="Enter the starting price">
-				</div>
-
-				<!-- Image Upload Field -->
-				<div class="mb-3">
-					<label for="image" class="form-label">Upload Image</label>
-					<input class="form-control" type="file" id="image" name="image" accept="image/*" required>
-				</div>
-
-				<!-- Submit Button -->
-				<button type="submit" class="btn btn-primary mb-5">Add to Auction</button>
-			</form>
-		</div>
 	</main>
 	<footer class="p-3 text-center footer">
 		<div class="container">

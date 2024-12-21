@@ -39,13 +39,52 @@
 		</nav>
 	</header>
 	<main>
+		<!-- post form start -->
+		<div class="container mt-5">
+			<h2 class="mb-4">Add Object to Auction</h2>
+			<form action="/submit-auction" method="POST" enctype="multipart/form-data">
+				<!-- Title Field -->
+				<div class="mb-3">
+					<label for="title" class="form-label">Title</label>
+					<input type="text" class="form-control" id="title" name="title" required
+						placeholder="Enter the name of the plant">
+				</div>
+
+				<!-- Description Field -->
+				<div class="mb-3">
+					<label for="description" class="form-label">Description</label>
+					<textarea class="form-control" id="description" name="description" rows="4" required
+						placeholder="Enter a description of the plant"></textarea>
+				</div>
+
+				<!-- Price Field -->
+				<div class="mb-3">
+					<label for="price" class="form-label">Starting Price</label>
+					<input type="number" class="form-control" id="price" name="price" required
+						placeholder="Enter the starting price">
+				</div>
+
+				<!-- Image Upload Field -->
+				<div class="mb-3">
+					<label for="image" class="form-label">Upload Image</label>
+					<input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+				</div>
+
+				<!-- Submit Button -->
+				<button type="submit" class="btn btn-primary mb-5">Add to Auction</button>
+			</form>
+		</div>
+		<!-- Post listing form end -->
+
 		<div>
+			<h2 class="text-center">All listings</h2>
 			<div class="d-flex justify-content-center align-items-center m-3">
 				<input id=" search-input" class="color-light-grey p-2 col-4" type="search"
 					placeholder="Search for title or description" aria-label="Search">
 			</div>
 			<!-- feed with all listings starts -->
 			<div class="container">
+
 				<div id="display-listings-container" class="row">
 
 				</div>
