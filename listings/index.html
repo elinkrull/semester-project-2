@@ -10,7 +10,8 @@
 	<link rel="stylesheet" href="../dist/css/index.css">
 	<!-- <script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script> -->
 	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script type="module" src="script/create.mjs"></script>
+	<script type="module" src="../script/create.mjs"></script>
+
 </head>
 
 <body class="min-vh-100">
@@ -41,36 +42,50 @@
 	<main>
 		<!-- post form start -->
 		<div class="container mt-5">
-			<h1 class="mb-4">Add Object</h1>
-			<form id="create-new-listing-form" action="/submit-auction" method="POST" enctype="multipart/form-data">
+			<h1 class="mb-4">Add Listing</h1>
+			<form id="create-new-listing-form" class="col-md-6">
+
 				<!-- Title Field -->
 				<div class="mb-3">
-					<label for="title" class="form-label">Title</label>
-					<input type="text" class="form-control" id="title" name="title" required placeholder="Add title">
+					<label for="create-title" class="form-label">Title</label>
+					<input type="text" class="form-control" id="create-title" name="title" required
+						placeholder="Add title" value="Monstera Variegata">
 				</div>
 
 				<!-- Description Field -->
 				<div class="mb-3">
-					<label for="description" class="form-label">Description</label>
-					<textarea class="form-control" id="description" name="description" rows="4" required
-						placeholder="Add a description"></textarea>
+					<label for="create-description" class="form-label">Description</label>
+					<input class="form-control" id="create-description" name="description" rows="4" required
+						placeholder="Add a description"
+						value="A beautiful Monstera Variegata. One plant with 5 leafs."></input>
 				</div>
 
 				<!-- Auction ends at Field -->
 				<div class="mb-3">
-					<label for="ends-at" class="form-label">Ends at:</label>
-					<input type="date" class="form-control" id="ending-date" name="Ends at" required
-						placeholder="Enter the ending time">
+					<label for="create-ends-at" class="form-label">Ends at:</label>
+					<input class="form-control" id="create-ends-at" name="Ends at" required
+						placeholder="Enter the ending time" value="28-Dec-2024">
 				</div>
 
 				<!-- Image Upload Field -->
+				<!-- <div class="mb-3">
+					<label for="create-image" class="form-label">Upload Image</label>
+					<input class="form-control" type="file" id="create-image" name="image" accept="image/*" required>
+				</div> -->
 				<div class="mb-3">
-					<label for="image" class="form-label">Upload Image</label>
-					<input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+					<label for="create-image-url" class="form-label">Image URL</label>
+					<input class="form-control" id="create-image-url" name=image-url" required placeholder="Image URL"
+						value="https://images.unsplash.com/photo-1433878455169-4698e60005b1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D>
+				</div>
+
+				<div class=" mb-3">
+					<label for="create-img-alt" class="form-label">Image Alt</label>
+					<input class="form-control" id="create-img-alt" name=img-alt" required placeholder="Image alt"
+						value="Rainbow in front of a waterfall">
 				</div>
 
 				<!-- Submit Button -->
-				<button type="submit" class="btn btn-primary mb-5">Add to Auction</button>
+				<button type="create-submit" id="create-submit-btn" class="btn btn-primary mb-5">Add to Auction</button>
 			</form>
 		</div>
 		<!-- Post listing form end -->
