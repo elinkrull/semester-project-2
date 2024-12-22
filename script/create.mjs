@@ -6,43 +6,49 @@
 // Submit the new listing to the right endpoint
 // Update the page and display the new listing together with all listings
 
+import { LISTINGS_URL } from "./constants.mjs";
+import { doFetch } from "./doFetch.mjs";
 
 const createNewListingForm = document.getElementById("create-new-listing-form");
+console.log(createNewListingForm);
 
 // Add callbackfunction. (HandleCreateNewListingSubmit is passed as an argument to addEventListener, and it will be called automatically when the "submit" event occurs on the createNewListingForm element.)
 createNewListingForm.addEventListener("submit", handleCreateNewListingSubmit);
 
-// async function handleCreateListing(listingData) {
-// 	const options = {
-// 		method
-// 	}
+async function createListing(listingData) {
+	const options = {
+		method: "POST",
+		body: JSON.stringify(listingData),
+		};
 
-// }
+		try {
+	 	await doFetch(LISTINGS_URL, options, true);
+		console.log("Listing successfully created");
+	  } catch (error) {
+		console.error("Failed to create listing:", error);
+	  }
+}
+
 
 // Make a click-event listener to get the data from the form
 function handleCreateNewListingSubmit(event) {
 	event.preventDefault();
+	console.log("Hello");
 
 	// Get the form elements
-	const createTitle = document.getElementById("create-title");
-	const createDescription = document.getElementById("create-description");
-	const createEndsAt = document.getElementById("create-ends-at");
-	const createImageUrl = document.getElementById("create-image-url");
-	const createImageAlt = document.getElementById("create-img-alt");
+	const title = document.getElementById("create-title");
+	const description = document.getElementById("create-description");
+	const endsAt = document.getElementById("create-ends-at");
 
 	// Saving the inputvalues from the form as createListingObject
-	const createListingData = {
-		title: createTitle.value,
-		description: createDescription.value,
-		endsAt: createEndsAt.value,
-		image: createImageUrl.value,
-		imageAlt: createImageAlt.value,
+	const listingData = {
+		title: title.value,
+		description: description.value,
+		endsAt: new Date(endsAt.value).toISOString(),
 	};
 
-	console.log(createListingData);
+	createListing(listingData);
 
-	// Passing the object with the input values into the handleCreateListing function
-	// handleCreateListing(createListingData);
-}
+	}
 
 

@@ -13,7 +13,7 @@ const loginForm = document.getElementById("login-form");
 
 loginForm.addEventListener("submit", handleLoginFormSubmit);
 
-async function handleLoginUser(userData) {
+async function loginUser(userData) {
 	const options = {
 		method: "POST",
 		headers: {
@@ -46,7 +46,7 @@ function handleLoginFormSubmit(event) {
 	};
 
 	// Passing the object with the input values into the handleLoginUser function
-	handleLoginUser(loginUserData);
+	loginUser(loginUserData);
 	
 	// Redirect to listings page if login is okey
 	setTimeout(() => (location.href = "./listings/"), 2000);
