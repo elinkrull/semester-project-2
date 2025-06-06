@@ -15,29 +15,78 @@
 </head>
 
 <body class="min-vh-100">
-	<header class="header d-flex flex-column flex-body">
-		<div class="row">
-			<div class="col-12 d-flex align-items-center">
-				<a class="nav-link text-center mx-auto logo p-5" href="/index.html">MarketMingle</a>
-			</div>
-		</div>
+	<header>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
 			<div class="container-fluid">
-				<a class="navbar-brand"></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<a class="navbar-brand logo ps-3" href="/index.html">MarketMingle</a>
+
+				<!-- Toggle button -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+					aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav custom-nav-link">
-						<a class="nav-link" aria-current="page" href="../index.html">Home</a>
-						<a class="nav-link active">Listings</a>
-						<a class="nav-link" href="../profile/index.html">Profile</a>
+
+				<!-- Offcanvas menu -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3 custom-nav-link">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="/">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="listings/index.html">Listings</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="profile/index.html">Profile</a>
+							</li>
+							<li class="nav-item">
+								<p class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</p>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</nav>
+		<!-- Login modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content mt-5">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+
+					<div class="modal-body">
+						<form id="login-form">
+
+							<div class="mb-3">
+								<label for="login-email" class="form-label">Email address</label>
+								<input type="email" class="form-control shadow rounded" id="login-email"
+									value="etjnoroff@stud.noroff.no" autocomplete="email" placeholder="name@stud.noroff.no" required>
+							</div>
+
+							<div class="mb-3">
+								<label for="login-password" class="form-label">Password</label>
+								<input type="password" class="form-control shadow rounded" id="login-password" value="etjnoroff123"
+									autocomplete="current-password" placeholder="Enter your password" minlength="8" required>
+								<div class="invalid-feedback">
+									Password must have a minimum length of 8 characters
+								</div>
+							</div>
+
+							<div class="text-center">
+								<button id="login-btn" class="btn btn-primary shadow rounded my-5 p-3" type="submit">Login</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 	<main>
 		<!-- post form start -->
