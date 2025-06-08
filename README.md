@@ -33,7 +33,7 @@ User stories:
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/elinkrull/SemesterProject2.git
+git clone https://github.com/elinkrull/semester-project-2.git
 ```
 
 2. Install the dependencies:
