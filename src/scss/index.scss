@@ -1,51 +1,29 @@
-$primary: rgb(3, 59, 3);
+// First import functions
+@import "../../node_modules/bootstrap/scss/functions";
 
-// scss-docs-start color-variables
-$blue:    #0d6efd !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
-$teal:    #20c997 !default;
-$cyan:    #0dcaf0 !default;
-// scss-docs-end color-variables
+// Now declare your custom variables
+$primary: #3a658a;
 
-// //bootstrap main file
+// (optional: add more custom variables here)
+
+// Then import the rest
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// //configuration
-// @import "../../node_modules/bootstrap/scss/functions";
-// @import "../../node_modules/bootstrap/scss/variables";
-// @import "../../node_modules/bootstrap/scss/variables-dark";
-// @import "../../node_modules/bootstrap/scss/maps";
-// @import "../../node_modules/bootstrap/scss/mixins";
-// @import "../../node_modules/bootstrap/scss/utilities";
-
-
-//ID´s og class names and then the styling
-
 .custom-nav-link {
-	font-size: 24px;
-  }
+  font-size: 24px;
+}
 
 .logo {
-	color: white;
-	font-size: 55px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-size: 55px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .sign-in-link {
-	font-size: 20px;
-	color: rgb(2, 71, 2);
+  font-size: 20px;
 }
 
-.header, .footer {
-	background-color: $primary;
-}
-
-.footer {
-	color: white;
+button {
+  background-color: $primary;
 }
