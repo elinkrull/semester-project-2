@@ -46,11 +46,13 @@ npm install
 
 Type in terminal:
 
+```
 npm run build
+```
 
 ## Live Website on Netlify
 
-https://semester-project-2-etj.netlify.app/
+https://melodic-cascaron-49bea7.netlify.app/
 
 ## Contact
 
