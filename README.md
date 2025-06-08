@@ -44,12 +44,14 @@ npm install
 
 ### Running
 
-You can open the page in the liveserver from VSC.
+Type in terminal:
 
-## Contributing
+npm run build
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+## Live Website on Netlify
+
+https://semester-project-2-etj.netlify.app/
 
 ## Contact
 
-You can send me and email to: eth_86@hotmail.com
+Elin Thoen Jakobsen (eth_86@hotmail.com)
