@@ -30,12 +30,10 @@ User stories:
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
-git clone
+git clone https://github.com/elinkrull/SemesterProject2.git
 ```
 
 2. Install the dependencies:
@@ -46,10 +44,12 @@ npm install
 
 ### Running
 
-You can open the page in the liveserver
+You can open the page in the liveserver from VSC.
 
 ## Contributing
 
 Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
 
 ## Contact
+
+You can send me and email to: eth_86@hotmail.com
