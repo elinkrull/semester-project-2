@@ -2,13 +2,11 @@
 
 <img width="160" alt="semesterProject" src="https://github.com/user-attachments/assets/9a88a505-6d8d-4f41-9320-727099b5193a" />
 
-A simple overview of the use/purpose of the project.
-
-## Description
-
 An auction site where users can add items to be bid on and bid on items other users have put up for auction.
 
 When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
+
+## Description
 
 User stories:
 
